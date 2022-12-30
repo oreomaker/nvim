@@ -2,7 +2,6 @@
 vim.g.nvim_tree_add_trailing = 1
 
 -- color theme
-
 -- tokyonight
 vim.cmd [[colorscheme tokyonight]]
 vim.g.tokyonight_sidebars = {"nvim-tree", "packer"}

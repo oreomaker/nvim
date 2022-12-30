@@ -44,13 +44,17 @@ vim.keybinds.gmap("n", "<leader>fc", "<cmd>NvimTreeFindFile<CR>", vim.keybinds.o
 -- bufferline 左右Tab切换
 vim.keybinds.gmap("n", "<C-h>", ":BufferLineCyclePrev<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<C-l>", ":BufferLineCycleNext<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<C-w>", ":BufferLinePickClose<CR>", vim.keybinds.opts)
 
 -- telescope
 vim.keybinds.gmap("n", "<C-r>", "<cmd>Telescope<CR>", vim.keybinds.opts)
 
+-- toggleterm
+vim.keybinds.gmap("n", "<C-j>", "<cmd>ToggleTerm<CR>", vim.keybinds.opts)
+
+
 -- lsp keybinds
 local pluginKeys = {}
-
 -- nvim-cmp 自动补全
 pluginKeys.cmp = function(cmp)
     return {
@@ -77,7 +81,6 @@ pluginKeys.cmp = function(cmp)
         ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'})
     }
 end
-
 -- lsp 回调函数快捷键设置
 pluginKeys.maplsp = function(mapbuf)
     -- rename
@@ -103,5 +106,4 @@ pluginKeys.maplsp = function(mapbuf)
     -- mapbuf('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opt)
     -- mapbuf('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
 end
-
 return pluginKeys
