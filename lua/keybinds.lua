@@ -58,7 +58,9 @@ vim.keybinds.gmap("n", "<A-k>", "<C-w>k", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<A-l>", "<C-w>l", vim.keybinds.opts)
 
 -- telescope
+vim.keybinds.gmap("n", "<C-p>", "<cmd>Telescope<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<C-e>", "<cmd>Telescope find_files<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<C-r>", "<cmd>Telescope oldfiles<CR>", vim.keybinds.opts)
 
 -- toggleterm
 vim.keybinds.gmap("n", "<C-j>", "<cmd>ToggleTerm<CR>", vim.keybinds.opts)
