@@ -1,14 +1,22 @@
 vim.opt.termguicolors = true
 require("bufferline").setup {
     options = {
-        -- 使用 nvim 内置lsp
-        diagnostics = "nvim_lsp",
-        -- 左侧让出 nvim-tree 的位置
+        -- use nvim built in lsp
+        diagnostics = 'nvim_lsp',
         offsets = {{
-            filetype = "NvimTree",
-            text = "File Explorer",
-            highlight = "Directory",
-            text_align = "left"
-        }}
+            filetype = 'NvimTree',
+            text = 'File Explorer',
+            highlight = 'Directory',
+            text_align = 'left',
+            separator = true
+        }},
+        indicator = {
+            style = 'icon'
+        },
+        hover = {
+            enabled = true,
+            delay = 200,
+            reveal = {'close'}
+        }
     }
 }

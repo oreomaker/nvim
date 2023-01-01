@@ -1,11 +1,11 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup({
-    function()
+    function(use)
         -- Packer can manage itself
         use 'wbthomason/packer.nvim'
         -- 中文文档
-        use {"yianwillis/vimcdoc"}
+        use 'yianwillis/vimcdoc'
         -- nvim-tree
         use {
             'nvim-tree/nvim-tree.lua',
@@ -54,7 +54,10 @@ return require('packer').startup({
             requires = {
                 'kyazdani42/nvim-web-devicons',
                 opt = true
-            }
+            },
+            config = function()
+                require('lua.conf.lualine')
+            end
         }
         -- treesitter highlight
         use {

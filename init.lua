@@ -1,8 +1,9 @@
 require("basic.settings")
-require("keybinds")
 require("basic.config")
 require("basic.plugins")
+require("keybinds")
 require("lsp.nvim-cmp")
+require("lsp.setup")
 
 -- temporarily move out
-require("nvim-tree").setup()
+require('conf.nvim-tree')
