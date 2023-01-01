@@ -16,7 +16,6 @@ vim.keybinds = {
 -- nvim-tree
 -- 按 ctrl b 打开文件树
 vim.keybinds.gmap("n", "<C-b>", "<cmd>NvimTreeToggle<CR>", vim.keybinds.opts)
-vim.keybinds.gmap("n", "<C-B>", "<cmd>NvimTreeFocus<CR>", vim.keybinds.opts)
 -- 按 leader fc 在文件树中找到当前以打开文件的位置
 vim.keybinds.gmap("n", "<leader>fc", "<cmd>NvimTreeFindFile<CR>", vim.keybinds.opts)
 -- 默认按键
@@ -47,8 +46,19 @@ vim.keybinds.gmap("n", "<C-h>", ":BufferLineCyclePrev<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<C-l>", ":BufferLineCycleNext<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<C-w>", ":BufferLinePickClose<CR>", vim.keybinds.opts)
 
+-- split screen
+vim.keybinds.gmap("n", "sv", ":vsp<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "sh", ":sp<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "sc", "<C-w>c", vim.keybinds.opts)
+vim.keybinds.gmap("n", "so", "<C-w>o", vim.keybinds.opts) -- close other
+-- screen switch
+vim.keybinds.gmap("n", "<A-h>", "<C-w>h", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<A-j>", "<C-w>j", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<A-k>", "<C-w>k", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<A-l>", "<C-w>l", vim.keybinds.opts)
+
 -- telescope
-vim.keybinds.gmap("n", "<C-r>", "<cmd>Telescope<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<C-e>", "<cmd>Telescope find_files<CR>", vim.keybinds.opts)
 
 -- toggleterm
 vim.keybinds.gmap("n", "<C-j>", "<cmd>ToggleTerm<CR>", vim.keybinds.opts)

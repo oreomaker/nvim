@@ -56,7 +56,7 @@ return require('packer').startup({
                 opt = true
             },
             config = function()
-                require('lua.conf.lualine')
+                require('conf.lualine')
             end
         }
         -- treesitter highlight
