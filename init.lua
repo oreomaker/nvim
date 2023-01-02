@@ -7,3 +7,4 @@ require("lsp.setup")
 
 -- temporarily move out
 require('conf.nvim-tree')
+require('conf.nvim-treesitter')
