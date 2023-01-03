@@ -13,6 +13,10 @@ require("bufferline").setup {
         indicator = {
             style = 'icon'
         },
+        show_close_icon = false,
+        show_duplicate_prefix = true,
+        separator_style = 'thin',
+        always_show_bufferline = true,
         hover = {
             enabled = true,
             delay = 200,

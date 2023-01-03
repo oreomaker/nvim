@@ -26,6 +26,7 @@ vim.o.relativenumber = false
 vim.o.scrolloff = 10
 -- 是否支持鼠标操作
 vim.o.mouse = "a"
+vim.o.mousemoveevent = true
 -- 是否开启备份文件
 vim.o.backup = false
 -- 是否开启交换文件

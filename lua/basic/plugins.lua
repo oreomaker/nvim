@@ -62,9 +62,11 @@ return require('packer').startup({
         -- treesitter highlight
         use {
             'nvim-treesitter/nvim-treesitter',
-            run = ':TSUpdate',
-            config = function()
-                require("conf.nvim-treesitter")
+            run = function()
+                local ts_update = require('nvim-treesitter.install').update({
+                    with_sync = true
+                })
+                ts_update()
             end
         }
         -- lsp config
